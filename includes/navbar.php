@@ -35,6 +35,10 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <?php
+            if (isset($_SESSION['userid'])) {
+              if($_SESSION['role']=="user"){
+              ?>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="index.php">Home</a>
             </li>
@@ -44,9 +48,7 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.php">Contact</a>
             </li>
-            <?php
-            if (isset($_SESSION['userid'])) {
-              ?>
+            
               <li class="nav-item">
                 <a class="nav-link" href="interviewers.php">Interviewers</a>
               </li>
@@ -61,7 +63,27 @@
                 <a class="nav-link" href="logout.php">Logout</a>
               </li>
               <?php
-            } else {
+            }else if
+            ($_SESSION['role']=="admin") {
+              ?>
+              <li class="nav-item">
+                <a class="nav-link" href="adminpanel.php">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+              </li> 
+              <?php
+              }else if($_SESSION['role']=="interviewer") {
+                ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="interviewerpanel.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="logout.php">Logout</a>
+                </li> 
+                <?php
+                } 
+              }else {
               ?>
               <li class="nav-item">
                 <a class="nav-link" href="register.php">Register</a>

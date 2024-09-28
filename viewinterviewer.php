@@ -9,10 +9,15 @@ if(isset($_GET["update"]))
     $phone=$_GET['phone'];
     $photo=$_GET['photo'];
     $qualification=$_GET['qualification'];
+    $description=$_GET['description'];
+    $price=$_GET["price"];
+    
+
+
     
     $password=$_GET['password'];
     $userid=$_GET['update'];
-    $update=$conn->query("UPDATE interviewer SET `name`='$name',`phone`='$phone',`password`='$password',`photo`='$photo',`qualification`='$qualification',`description`='$description'  WHERE `userid`='$userid'");
+    $update=$conn->query("UPDATE interviewer SET `name`='$name',`phone`='$phone',`password`='$password',`photo`='$photo',`qualification`='$qualification',`description`='$description',`price`='$price'  WHERE `userid`='$userid'");
 }
 
 if(isset($_GET["delete"]))
@@ -34,6 +39,8 @@ if($addinterviewer->num_rows>0)
             <th>qualification</th>
             <th>photo</th>
             <th>description</th>
+            <th>price</th>
+
 </tr>
 <?php
 while($r=mysqli_fetch_array($addinterviewer))
@@ -48,6 +55,7 @@ while($r=mysqli_fetch_array($addinterviewer))
         <td><input type="text" name="qualification" value="<?php echo $r['qualification'];?>"></td>
         <td><input type="text" name="photo" value="<?php echo $r['photo'];?>"></td>
         <td><input type="text" name="description" value="<?php echo $r['description'];?>"></td>
+        <td><input type="text" name="price" value="<?php echo $r['price'];?>"></td>
         <td><button type="submit" name="update" value="<?php echo $r['userid'];?>">update</button></form></td>
         <td><form action="" method="get">
         <button type="submit" name="delete" value="<?php echo $r['userid'];?>">delete</button> </form></td>

@@ -1,13 +1,16 @@
 <?php
 include ('./includes/navbar.php');
 ?>
+<?php
+session_start();
+?>
     <head>
-        <title>adminpanel</title>
+        <title>interviewerpanel</title>
 </head>
 <div class="container pt-5 mt-5">
     <div class="row gap-3">
 
-    <a class="col btn btn-success" href="userbooking.php">userbooking</a><br>
+    <a class="col btn btn-success" href="interviewerbookings.php">interviewerbooking</a><br>
    
 </div>
 </div>

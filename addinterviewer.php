@@ -3,20 +3,21 @@ include('./includes/navbar.php');
 ?>
 <?php
 session_start();
-if (isset($_GET["register"])) {
+if (isset($_POST["register"])) {
     
-    $name = $_GET['name'];
-   $userid = $_GET['userid'];
-    $password = $_GET['password'];
+    $name = $_POST['name'];
+   $userid = $_POST['userid'];
+    $password = $_POST['password'];
     $photo = $_FILES['photo']['name'];
     $photo_target = "uploads/photos/" . basename($photo);
     move_uploaded_file($_FILES['photo']['tmp_name'], $photo_target);
-    
-     $phone = $_GET['phone'];
-    $qualification = $_GET['qualification'];
-    $description = $_GET['description'];
+    $phone = $_POST['phone'];
+    $qualification = $_POST['qualification'];
+    $description = $_POST['description'];
+    $price=$_POST['price'];
    
- $res = $conn->query("INSERT INTO `interviewer`(`name`, `userid`, `password`, `photo`, `phone`, `qualification`, `description`) VALUES ('$name','$userid','$password','$photo_target','$phone','$qualification','$description')");
+ $res = $conn->query("INSERT INTO `interviewer`(`name`, `userid`, `password`, `photo`, `phone`, `qualification`, `description`,`price`) 
+ VALUES ('$name','$userid','$password','$photo_target','$phone','$qualification','$description','$price')");
  if ($res) {
         echo "<script>alert('Added successfully')</script>";
     }
@@ -26,7 +27,7 @@ if (isset($_GET["register"])) {
 
 <div class="container" style="margin-top:200px;">
     <h2 class="text-center mb-3">Interviewer Registration</h2>
-    <form class="row" action="" method="get" enctype="multipart/form-data">
+    <form class="row" action="" method="post" enctype="multipart/form-data">
         <div class="form-group col-3">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" name="name" required>
@@ -58,6 +59,11 @@ if (isset($_GET["register"])) {
         <div class="form-group col-3">
             <label for="description">description</label>
             <input type="text" class="form-control" id="description" name="description" required>
+        </div>
+        
+        <div class="form-group col-3">
+            <label for="price">price</label>
+            <input type="text" class="form-control" id="price" name="price" required>
         </div>
         <button type="submit" class="btn btn-primary mt-3" name="register">Register</button>
     </form>

@@ -38,9 +38,9 @@
 }
 </style>
     <div class="login-container" >
-        <h2>Admin Login</h2>
+        <h2>Interviewer Login</h2>
         <form action="" method="post">
-            <input type="text" name="userid" placeholder="Username" required>
+            <input type="text" name="Userid" placeholder="Username" required>
             <input type="password" name="Password" placeholder="Password" required>  
             <input type="password" name="confirmPassword" placeholder="Confirm Password" required>  
             <button type="submit" name="LOGIN">Login</button>
@@ -58,20 +58,20 @@ else{
 }
 if(isset($_POST["LOGIN"]))
 {
-    $userid=$_POST["userid"];
+    $Userid=$_POST["Userid"];
     $Password=$_POST["Password"];
     $confirmPassword=$_POST["confirmPassword"];
     if($Password==$confirmPassword){
 
     
-    $s=$con->query("SELECT * FROM admin where userid='$userid' and Password= '$Password'");
+    $s=$con->query("SELECT * FROM admin where Userid='$Userid' and Password= '$Password'");
     if($s->num_rows>0)
     {
         echo "<script> alert('user exist'); </script>";
         while($r=mysqli_fetch_array($s))
-        $_SESSION["userid"]=$userid;
-        $_SESSION["role"]="admin";
-        header("location:adminpanel.php");
+        $_SESSION["Userid"]=$Userid;
+        $_SESSION["interviewerid"]="$userid";
+        header("location:interviewerpanel.php");
     }
     else
     {

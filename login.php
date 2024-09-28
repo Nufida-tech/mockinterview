@@ -20,6 +20,7 @@ if (isset($_POST['login'])) {
             if ($password == $r['password']) {
                 $_SESSION['userid']=$userid;    
                 $_SESSION['userimage']=$r['photo'];
+                $_SESSION['role']="user";
                 header("location:interviewers.php");
             } else {
                 echo "<script>alert('Invalid Password')</script>";
@@ -33,9 +34,6 @@ if (isset($_POST['login'])) {
 
 // Close connection
 $conn->close();
-}
-else{
-    echo "<script>alert('password is not alert')</script>";
 }
 ?>
 
