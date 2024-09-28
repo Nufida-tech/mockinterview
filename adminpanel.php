@@ -11,8 +11,7 @@ include ('./includes/navbar.php');
     <a  class="col btn btn-success"href="viewinterviewer.php">viewinterviewer</a><br>
     <a class="col btn btn-success"href="viewuser.php">viewuser</a><br>
     <a  class="col btn btn-success"href="viewbookings.php">viewbookings</a><br>
-    <a  class="col btn btn-success"href="userbooking.php">userbooking</a><br>
-
+    
 </div>
 </div>
 <?php

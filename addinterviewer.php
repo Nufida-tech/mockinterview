@@ -9,7 +9,7 @@ if (isset($_POST["register"])) {
    $userid = $_POST['userid'];
     $password = $_POST['password'];
     $photo = $_FILES['photo']['name'];
-    $photo_target = "uploads/photos/" . basename($photo);
+    $photo_target = "uploads/photos/" . $photo;
     move_uploaded_file($_FILES['photo']['tmp_name'], $photo_target);
     $phone = $_POST['phone'];
     $qualification = $_POST['qualification'];

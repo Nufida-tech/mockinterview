@@ -9,10 +9,10 @@ if (!$conn) {
 
 if (isset($_POST['update'])) {
     $booking_id = $_POST['booking_id'];
-    $description = $_POST['description'];
+    $updation = $_POST['updation'];
 
     
-    $sql = $conn->query("UPDATE bookings SET description='$description' WHERE id='$booking_id'");
+    $sql = $conn->query("UPDATE bookings SET updation='$updation' WHERE id='$booking_id'");
 
     if ($sql) {
         echo "Booking updated successfully!";
@@ -62,7 +62,7 @@ $s = $conn->query("SELECT * FROM bookings WHERE interviewerid='$interviewerid'")
                         <!-- Form to update the description with link and time -->
                         <form action="" method="POST">
                             <input type="hidden" name="booking_id" value="<?php echo $row['id']; ?>">
-                            <textarea class="form-control" name="description" rows="2" placeholder="Add meeting link and time..."><?php echo $row['description']; ?></textarea>
+                            <textarea class="form-control" name="updation" rows="2" placeholder="Add meeting link and time..."><?php echo $row['updation']; ?></textarea>
                             <button type="submit" name="update" class="btn btn-primary mt-2">Update</button>
                         </form>
                     </td>
@@ -81,3 +81,4 @@ $s = $conn->query("SELECT * FROM bookings WHERE interviewerid='$interviewerid'")
 </body>
 </html>
 <?php include('includes/footer.php')?>
+

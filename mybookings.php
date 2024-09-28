@@ -13,9 +13,10 @@ if(isset($_POST['book']))
     $interviewerid = $interid;
     $description = $_POST['description'];
     $dateofbooking = $_POST['dateofbooking'];
-    $status = "pending";
+    $updation = "pending";
     $paymentstatus = "pending";
-    $insert=$conn->query("INSERT INTO bookings (userid, interviewerid, description, dateofbooking, status, paymentstatus) VALUES ('$userid','$interviewerid','$description','$dateofbooking','$status','$paymentstatus')");
+    $insert=$conn->query("INSERT INTO bookings (userid, interviewerid, description, dateofbooking, updation, paymentstatus)
+     VALUES ('$userid','$interviewerid','$description','$dateofbooking','$updation','$paymentstatus')");
 
 }
 $userid=$_SESSION["userid"];
@@ -41,7 +42,7 @@ if($s->num_rows>0){
                 <th>Interviewer ID</th>
                 <th>Description</th>
                 <th>Date of Booking</th>
-                <th>Status</th>
+                <th>updation</th>
                 <th>Payment Status</th>
             </tr>
        
@@ -53,7 +54,7 @@ if($s->num_rows>0){
                 <td><?php echo $row['interviewerid']; ?></td>
                 <td><?php echo $row['description']; ?></td>
                 <td><?php echo $row['dateofbooking']; ?></td>
-                <td><?php echo $row['status']; ?></td>
+                <td><?php echo $row['updation']; ?></td>
                 <td><?php echo $row['paymentstatus']; ?></td>
             </tr>
             <?php } ?>
@@ -71,4 +72,7 @@ if($s->num_rows>0){
 
 <?php
 $conn->close();
+?>
+<?php
+include ('./includes/footer.php');
 ?>

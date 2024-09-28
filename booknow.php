@@ -19,12 +19,12 @@ if (isset($_POST['book'])) {
     $description = $_POST['description'];
     $dateofbooking = $_POST['dateofbooking'];
     $price=$_POST['price'];
-    $status = "pending";
+    $updation = $_POST['updation'];;
     $paymentstatus = "pending";
 
     // Insert the booking into the database
-    $sql = $conn->query("INSERT INTO bookings(userid, interviewerid, description, dateofbooking,price, status, paymentstatus) 
-                         VALUES ('$userid', '$interviewerid', '$description', '$dateofbooking','$price', '$status', '$paymentstatus')");
+    $sql = $conn->query("INSERT INTO bookings(userid, interviewerid, description, dateofbooking,price, updation, paymentstatus) 
+                         VALUES ('$userid', '$interviewerid', '$description', '$dateofbooking','$price', '$updation', '$paymentstatus')");
 
     if ($sql) {
         $booking_id = $conn->insert_id; // Get the booking ID
