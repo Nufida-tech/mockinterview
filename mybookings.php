@@ -42,7 +42,7 @@ if($s->num_rows>0){
                 <th>Interviewer ID</th>
                 <th>Description</th>
                 <th>Date of Booking</th>
-                <th>updation</th>
+                <th>Updation</th>
                 <th>Payment Status</th>
             </tr>
        

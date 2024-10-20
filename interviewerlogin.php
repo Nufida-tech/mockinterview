@@ -80,7 +80,7 @@
     ?>
 
     <div class="login-container">
-        <h2>interviewer Login</h2>
+        <h2>Interviewer Login</h2>
         <form action="" method="post">
             <input type="text" name="userid" placeholder="Username" required>
             <input type="password" name="Password" placeholder="Password" required>

@@ -1,6 +1,16 @@
 <?php
 include('./includes/navbar.php');
 ?>
+<style>
+    .text-center{
+        color:white;
+    }
+    body{
+      background:url(uploads/images/nufi.avif);
+      background-size: cover;
+      background-position: center;
+    }
+</style>
 <div class="container" style="margin-top: 150px;">
         <!-- Welcome Section -->
         <div class="text-center">

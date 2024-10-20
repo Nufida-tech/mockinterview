@@ -50,7 +50,7 @@ $conn->close();
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <div class="form-group col-7">
-        <label for="confirmpassword">confirmpassword</label>
+        <label for="confirmpassword">ConfirmPassword</label>
         <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
 </div>
         <button type="submit" class="btn btn-dark col-7 mt-3" name="login">Login</button>

@@ -1,5 +1,5 @@
 
-
+<?php include('includes/navbar.php') ?>
 
 <?php
 
@@ -52,7 +52,7 @@ $result = $conn->query($sql);
                 <td><?php echo $row['interviewerid']; ?></td>
                 <td><?php echo $row['description']; ?></td>
                 <td><?php echo $row['dateofbooking']; ?></td>
-                <td><?php echo $row['status']; ?></td>
+                <td><?php echo $row['updation']; ?></td>
                 <td><?php echo $row['paymentstatus']; ?></td>
             </tr>
             <?php } ?>
@@ -67,4 +67,7 @@ $result = $conn->query($sql);
 
 <?php
 $conn->close();
+?>
+<?php
+include ('./includes/footer.php');
 ?>

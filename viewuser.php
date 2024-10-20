@@ -36,14 +36,14 @@ if($user->num_rows>0)
     ?>
     <table>
         <tr>
-            <th>name</th>
-            <th>email</th>
-            <th>address</th>
-            <th>phone</th>
-            <th>userid</th>
-            <th>password</th>
-            <th>qualification</th>
-            <th>photo</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Userid</th>
+            <th>Password</th>
+            <th>Qualification</th>
+            <th>Photo</th>
             
            
             
@@ -66,9 +66,9 @@ while($r=mysqli_fetch_array($user))
         <td><input type="text" name="qualification" value="<?php echo $r['qualification'];?>"></td>
         <td><input type="text" name="photo" value="<?php echo $r['photo'];?>"></td>
         
-        <td><button type="submit" name="update" value="<?php echo $r['userid'];?>">update</button></form></td>
+        <td><button type="submit" name="update" value="<?php echo $r['userid'];?>">Update</button></form></td>
         <td><form action="" method="get">
-        <button type="submit" name="delete" value="<?php echo $r['userid'];?>">delete</button> </form></td>
+        <button type="submit" name="delete" value="<?php echo $r['userid'];?>">Delete</button> </form></td>
 </tr>
 <?php      
 }

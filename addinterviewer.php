@@ -57,12 +57,12 @@ if (isset($_POST["register"])) {
         </div>
        
         <div class="form-group col-3">
-            <label for="description">description</label>
+            <label for="description">Description</label>
             <input type="text" class="form-control" id="description" name="description" required>
         </div>
         
         <div class="form-group col-3">
-            <label for="price">price</label>
+            <label for="price">Price</label>
             <input type="text" class="form-control" id="price" name="price" required>
         </div>
         <button type="submit" class="btn btn-primary mt-3" name="register">Register</button>

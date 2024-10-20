@@ -31,15 +31,15 @@ if($addinterviewer->num_rows>0)
     ?>
     <table>
         <tr>
-            <th>name</th>
+            <th>Name</th>
             
-            <th>phone</th>
-            <th>userid</th>
-            <th>password</th>
-            <th>qualification</th>
-            <th>photo</th>
-            <th>description</th>
-            <th>price</th>
+            <th>Phone</th>
+            <th>Userid</th>
+            <th>Password</th>
+            <th>Qualification</th>
+            <th>Photo</th>
+            <th>Description</th>
+            <th>Price</th>
 
 </tr>
 <?php
@@ -56,9 +56,9 @@ while($r=mysqli_fetch_array($addinterviewer))
         <td><input type="text" name="photo" value="<?php echo $r['photo'];?>"></td>
         <td><input type="text" name="description" value="<?php echo $r['description'];?>"></td>
         <td><input type="text" name="price" value="<?php echo $r['price'];?>"></td>
-        <td><button type="submit" name="update" value="<?php echo $r['userid'];?>">update</button></form></td>
+        <td><button type="submit" name="update" value="<?php echo $r['userid'];?>">Update</button></form></td>
         <td><form action="" method="get">
-        <button type="submit" name="delete" value="<?php echo $r['userid'];?>">delete</button> </form></td>
+        <button type="submit" name="delete" value="<?php echo $r['userid'];?>">Delete</button> </form></td>
 </tr>
 <?php      
 }

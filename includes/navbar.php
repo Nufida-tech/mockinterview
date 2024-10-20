@@ -14,6 +14,8 @@
     .form-control {
       background-color: #f29be8;
     }
+    
+    
   </style>
   <?php
   $conn = mysqli_connect("localhost", "root", "", "mockinterview");

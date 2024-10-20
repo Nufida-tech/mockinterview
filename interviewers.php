@@ -17,7 +17,7 @@ include ('./includes/navbar.php');
                             <p class="card-text"><?php echo $r['qualification']; ?></p>
                             <p class="card-text"><?php echo $r['description']; ?></p>
                             
-                            <form action="booknow.php" method="GET"><button type="submit" name="book" value=<?php echo $r['userid'];?>>book </button></form>
+                            <form action="booknow.php" method="GET"><button type="submit" name="book" value=<?php echo $r['userid'];?>>Book </button></form>
 
                         </div>
                     </div>
