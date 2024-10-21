@@ -55,7 +55,7 @@
         text-decoration: none;
         color: #fff;
         background-color: #0d6efd;
-        padding: 15px 20px; 
+        padding: 15px 20
         border-radius: 30px; 
         font-size: 18px; 
         transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
